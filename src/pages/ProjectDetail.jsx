@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Github } from 'lucide-react';
 import { projects } from '../data/projects';
 
 const ProjectDetail = () => {
@@ -53,24 +53,15 @@ const ProjectDetail = () => {
                                 alt={project.title}
                                 className="w-full rounded-xl shadow-2xl mb-8"
                             />
-                            <div className="flex gap-4">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 bg-gray-800 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors"
-                                >
-                                    <Github size={20} /> View Code
-                                </a>
-                                <a
-                                    href={project.demo}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 py-3 rounded-lg flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-purple-500/25 transition-all"
-                                >
-                                    <ExternalLink size={20} /> Live Demo
-                                </a>
-                            </div>
+                            {/* View Code button now centered and taking full width */}
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full bg-gray-800 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors"
+                            >
+                                <Github size={20} /> View Code
+                            </a>
                         </div>
 
                         <div className="space-y-6">
@@ -87,8 +78,6 @@ const ProjectDetail = () => {
                                     <p className="text-purple-400">{project.period}</p>
                                 </div>
                             )}
-
-                            {/* Add more sections here if you have more data like 'Challenges', 'Tech Stack Details' etc. */}
                         </div>
                     </div>
                 </motion.div>
