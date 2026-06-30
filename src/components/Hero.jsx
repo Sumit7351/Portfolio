@@ -20,10 +20,10 @@ const Hero = () => {
                         Hello, I'm {profile.name}
                     </h2>
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-                        {profile.role} <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Extraordinaire</span>
+                        Computer Science <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Graduate</span>
                     </h1>
                     <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                        {profile.bio}
+                        I am a Computer Science graduate passionate about Cybersecurity and Machine Learning. I love turning complex problems into elegant solutions.
                     </p>
 
                     <div className="flex flex-col md:flex-row justify-center gap-4">
